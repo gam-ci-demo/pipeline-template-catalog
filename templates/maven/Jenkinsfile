@@ -10,7 +10,7 @@ pipeline {
       stages {
         stage("Demo Intro"){ 
           steps {
-            publishEvent event: jsonEvent('{"Demo Message":"hello Nathan}')
+            publishEvent event: jsonEvent('{"Demo Message":"helloWorkd}')
           }
         }
         stage("Set GitHub Branch Protection") {
