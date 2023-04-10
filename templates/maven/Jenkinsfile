@@ -8,6 +8,11 @@ pipeline {
     stage('Agent') {
       agent { label 'maven' }
       stages {
+        stage("Demo Intro"){ 
+          steps {
+            publishEvent event: jsonEvent('{"Demo Message":"helloWorld"}')
+          }
+        }
         stage("Set GitHub Branch Protection") {
           when { 
             anyOf {
